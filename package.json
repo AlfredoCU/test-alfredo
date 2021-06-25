@@ -1,0 +1,48 @@
+{
+  "name": "test-alfredo",
+  "version": "1.0.0",
+  "description": "This challenge consist in making a single page application using  React.js, Redux.js and SASS all files have to be in github on a repository named test-your-name.",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack serve --config ./webpack.config.js --mode development --port 3000",
+    "build": "webpack --mode development",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlfredoCU/test-alfredo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlfredoCU/test-alfredo/issues"
+  },
+  "homepage": "https://github.com/AlfredoCU/test-alfredo#readme",
+  "dependencies": {
+    "moment": "^2.29.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.4",
+    "redux": "^4.1.0",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^2.3.0",
+    "sass": "^1.35.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.7",
+    "@babel/preset-react": "^7.14.5",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "css-loader": "^5.2.6",
+    "html-loader": "^2.1.2",
+    "html-webpack-plugin": "^5.3.2",
+    "react-hot-loader": "^4.13.0",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^3.0.0",
+    "webpack": "^5.40.0",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
