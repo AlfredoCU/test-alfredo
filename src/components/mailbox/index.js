@@ -9,7 +9,15 @@ const MailBox = () => {
     <div className="app__box">
       <Header />
       <Search />
-      <EmailItem />
+      <div className="box-email">
+        <EmailItem />
+        <EmailItem />
+        <EmailItem />
+        <EmailItem />
+        <EmailItem />
+        <EmailItem />
+        <EmailItem />
+      </div>
     </div>
   );
 };
