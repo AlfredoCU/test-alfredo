@@ -1,4 +1,6 @@
 import React from "react";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import Input from "../common/Input";
 
@@ -11,8 +13,9 @@ const Search = () => {
         name="search"
         value=""
         // onChange={}
-        placeholder="Search"
+        placeholder={"Search"}
       />
+      <FontAwesomeIcon icon={faSearch} className="box-search__icon" />
     </div>
   );
 };
