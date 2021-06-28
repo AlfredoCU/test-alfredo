@@ -1,0 +1,182 @@
+[
+  {
+    "id": "1624833192454",
+    "from": "mhallatt0@walmart.com",
+    "to": "cziem0@surveymonkey.com",
+    "subject": "Office Assistant IV",
+    "body": "condimentum curabitur in libero ut massa volutpat convallis morbi odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis",
+    "date": "3/31/2017",
+    "isReaded": false,
+    "section": "inbox",
+    "avatar": "https://robohash.org/dignissimosetsuscipit.jpg?size=50x50&set=set1",
+    "tags": ["business", "notice"],
+    "attachements": [
+      {
+        "file": "http://dummyimage.com/250x250.jpg/5fa2dd/ffffff",
+        "name": "ut_nulla_sed.jpeg"
+      }
+    ]
+  },
+  {
+    "id": "1624833209368",
+    "from": "mhallatt0@walmart.com",
+    "to": "cziem0@surveymonkey.com",
+    "subject": "Office Assistant IV",
+    "body": "condimentum curabitur in libero ut massa volutpat convallis morbi odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis",
+    "date": "3/31/2017",
+    "isReaded": false,
+    "section": "inbox",
+    "avatar": "https://robohash.org/dignissimosetsuscipit.jpg?size=50x50&set=set1",
+    "tags": ["business", "notice"],
+    "attachements": [
+      {
+        "file": "http://dummyimage.com/250x250.jpg/5fa2dd/ffffff",
+        "name": "ut_nulla_sed.jpeg"
+      }
+    ]
+  },
+  {
+    "id": "1624833236344",
+    "from": "mhallatt0@walmart.com",
+    "to": "cziem0@surveymonkey.com",
+    "subject": "Office Assistant IV",
+    "body": "condimentum curabitur in libero ut massa volutpat convallis morbi odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis",
+    "date": "3/31/2017",
+    "isReaded": true,
+    "section": "inbox",
+    "avatar": "https://robohash.org/dignissimosetsuscipit.jpg?size=50x50&set=set1",
+    "tags": ["business", "notice"],
+    "attachements": [
+      {
+        "file": "http://dummyimage.com/250x250.jpg/5fa2dd/ffffff",
+        "name": "ut_nulla_sed.jpeg"
+      }
+    ]
+  },
+  {
+    "id": "1624833250617",
+    "from": "nmulbery1@seattletimes.com",
+    "to": "idimont1@usa.gov",
+    "subject": "Technical Writer",
+    "body": "sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam sit amet",
+    "date": "11/17/2016",
+    "isReaded": false,
+    "section": "spam",
+    "avatar": "https://robohash.org/aliquamautdolore.jpg?size=50x50&set=set1",
+    "tags": ["technology", "ideas"],
+    "attachements": [
+      {
+        "file": "http://dummyimage.com/250x250.jpg/dddddd/000000",
+        "name": "sodales_scelerisque_mauris.jpeg"
+      }
+    ]
+  },
+  {
+    "id": "1624833262865",
+    "from": "nmulbery1@seattletimes.com",
+    "to": "idimont1@usa.gov",
+    "subject": "Technical Writer",
+    "body": "sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam sit amet",
+    "date": "11/17/2016",
+    "isReaded": true,
+    "section": "spam",
+    "avatar": "https://robohash.org/aliquamautdolore.jpg?size=50x50&set=set1",
+    "tags": ["technology", "ideas"],
+    "attachements": [
+      {
+        "file": "http://dummyimage.com/250x250.jpg/dddddd/000000",
+        "name": "sodales_scelerisque_mauris.jpeg"
+      }
+    ]
+  },
+  {
+    "id": "1624833272309",
+    "from": "nmulbery1@seattletimes.com",
+    "to": "idimont1@usa.gov",
+    "subject": "Technical Writer",
+    "body": "sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam sit amet",
+    "date": "11/17/2016",
+    "isReaded": true,
+    "section": "spam",
+    "avatar": "https://robohash.org/aliquamautdolore.jpg?size=50x50&set=set1",
+    "tags": ["technology", "ideas"],
+    "attachements": [
+      {
+        "file": "http://dummyimage.com/250x250.jpg/dddddd/000000",
+        "name": "sodales_scelerisque_mauris.jpeg"
+      }
+    ]
+  },
+  {
+    "id": "1624833288255",
+    "from": "nmulbery1@seattletimes.com",
+    "to": "idimont1@usa.gov",
+    "subject": "Technical Writer",
+    "body": "sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam sit amet",
+    "date": "11/17/2016",
+    "isReaded": true,
+    "section": "trash",
+    "avatar": "https://robohash.org/aliquamautdolore.jpg?size=50x50&set=set1",
+    "tags": ["technology", "ideas"],
+    "attachements": [
+      {
+        "file": "http://dummyimage.com/250x250.jpg/dddddd/000000",
+        "name": "sodales_scelerisque_mauris.jpeg"
+      }
+    ]
+  },
+  {
+    "id": "1624833299360",
+    "from": "nmulbery1@seattletimes.com",
+    "to": "idimont1@usa.gov",
+    "subject": "Technical Writer",
+    "body": "sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam sit amet",
+    "date": "11/17/2016",
+    "isReaded": false,
+    "section": "trash",
+    "avatar": "https://robohash.org/aliquamautdolore.jpg?size=50x50&set=set1",
+    "tags": ["technology", "ideas"],
+    "attachements": [
+      {
+        "file": "http://dummyimage.com/250x250.jpg/dddddd/000000",
+        "name": "sodales_scelerisque_mauris.jpeg"
+      }
+    ]
+  },
+  {
+    "id": "1624833308966",
+    "from": "nmulbery1@seattletimes.com",
+    "to": "idimont1@usa.gov",
+    "subject": "Technical Writer",
+    "body": "sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam sit amet",
+    "date": "11/17/2016",
+    "isReaded": true,
+    "section": "trash",
+    "avatar": "https://robohash.org/aliquamautdolore.jpg?size=50x50&set=set1",
+    "tags": ["technology", "ideas"],
+    "attachements": [
+      {
+        "file": "http://dummyimage.com/250x250.jpg/dddddd/000000",
+        "name": "sodales_scelerisque_mauris.jpeg"
+      }
+    ]
+  },
+  {
+    "id": "1624833321637",
+    "from": "nmulbery1@seattletimes.com",
+    "to": "idimont1@usa.gov",
+    "subject": "Technical Writer",
+    "body": "sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam sit amet",
+    "date": "11/17/2016",
+    "isReaded": true,
+    "section": "inbox",
+    "avatar": "https://robohash.org/aliquamautdolore.jpg?size=50x50&set=set1",
+    "tags": ["technology", "ideas"],
+    "attachements": [
+      {
+        "file": "http://dummyimage.com/250x250.jpg/dddddd/000000",
+        "name": "sodales_scelerisque_mauris.jpeg"
+      }
+    ]
+  }
+]
