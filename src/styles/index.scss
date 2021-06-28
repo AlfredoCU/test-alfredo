@@ -1,0 +1,120 @@
+@import "./normalize.css";
+@import "./queries.scss";
+@import "./colors.scss";
+
+body {
+  font-size: 0.75rem;
+  color: $font-color;
+  background-color: $body-bg;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.app {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  
+  &__box {
+    width: 30%;
+    background-color: white;
+    box-shadow: 0 25px 50px -12px $shadow;
+  }
+  
+  &__detail {
+    width: 70%;
+  }
+}
+
+.box-header {
+  display: flex;
+  padding: 0.5rem;
+  justify-content: space-between;
+  border-bottom: 1px solid $border;
+
+  &__section {
+    display: flex;
+    position: relative;
+    align-items: center;
+  }
+
+  &__icon {
+    padding: 0 0.5rem;
+    font-size: 1.2rem;
+  }
+
+  &__count {
+    color: white;
+    margin: 0 0.5rem;
+    border-radius: 9999px;
+    padding: 0.3rem 0.7rem;
+    background-color: $red;
+    box-shadow:  0 2px 4px -1px $red;
+  }
+}
+
+.dropdown {
+  display: flex;
+  cursor: pointer;
+  margin: 0 0.5rem;
+  font-weight: bold;
+  align-items: center;
+  border-radius: 0.2rem;
+  border: 1px solid $border;
+  background-color: white;
+
+  &:hover {
+    background-color: $gray;
+  }
+
+  &__text {
+    padding: 0.5rem;
+    border-right: 1px solid $border;
+  }
+
+  &__icon {
+    color: $blue;
+    font-size: 1rem;
+    padding: 0 0.2rem 0 0.5rem;
+  }
+
+  &__list {
+    top: 40px;
+    right: 8px;
+    padding: 0;
+    width: 8rem;
+    list-style: none;
+    position: absolute;
+    border-radius: 0.2rem;
+    border: 1px solid $border;
+    background-color: white;
+  }
+
+  &__item {
+    padding: 0.9rem;
+    cursor: pointer;
+    font-weight: bold;
+    border-bottom: 1px solid $border;
+
+    &:hover {
+      background-color: $gray;
+    }
+  }
+}
+
+.box-search {
+  display: flex;
+  padding: 1rem 0.5rem;
+  justify-content: center;
+  border-bottom: 1px solid $border;
+}
+
+.input {
+  width: 95%;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  border-radius: 0.2rem;
+  border: 1px solid $border;
+  box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.1);
+}
+
+//   @include small() { }
