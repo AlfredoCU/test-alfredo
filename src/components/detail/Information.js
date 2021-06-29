@@ -1,6 +1,10 @@
 import React from "react";
+import { faPaperclip } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import TagItem from "./TagItem";
 import FileItem from "./FileItem";
+import Button from "../common/Button";
 import Textarea from "../common/Textarea";
 
 const Information = () => {
@@ -31,7 +35,16 @@ const Information = () => {
           <FileItem />
         </div>
       </div>
-      <Textarea />
+      <div className="detail-info__send">
+        <FontAwesomeIcon icon={faPaperclip} className="detail-info__icon" />
+        <Textarea />
+        <Button
+          type="button"
+          className="button button--primary detail-info__button"
+        >
+          Replay
+        </Button>
+      </div>
     </div>
   );
 };
