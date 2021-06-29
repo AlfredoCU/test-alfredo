@@ -1,38 +1,57 @@
 import { types } from "../types/types";
+import data from "../../samples/mail-data.json";
 
-export const emailReducer = (state = {}, action) => {
+const initialState = {
+  emails: data,
+  filter: [],
+  search: ""
+};
+
+export const emailReducer = (state = initialState, action) => {
   switch (action.type) {
     case types.add:
-      // payload -> object.
-      return [action.payload, ...state];
+      return {
+        ...state,
+        emails: [action.payload, ...state]
+      };
 
     case types.filter:
-      // payload -> string.
-      return state.filter(item => item.section === action.payload);
+      return {
+        ...state,
+        filter: state.emails.filter(item => item.section === action.payload)
+      };
 
     case types.search:
-      // payload -> object.
-      return state.filter(
-        item =>
-          item.section === action.payload.section &&
-          item.includes(action.payload.value)
-      );
+      console.log(action.payload);
+      return {
+        ...state,
+        search: action.payload.value,
+        filter: search
+          ? state.emails.filter(
+              item =>
+                item.section === action.payload.section &&
+                item.subject
+                  .toLowerCase()
+                  .indexOf(action.payload.value.toLowerCase()) > -1
+            )
+          : state.emails.filter(item => item.section === action.payload.section)
+      };
 
     case types.readed:
-      // payload -> number.
-      return state.map(item =>
-        item.id === action.payload
-          ? { ...item, isReaded: !item.isReaded }
-          : item
-      );
+      return { ...state };
+    // return state.map(item =>
+    //   item.id === action.payload
+    //     ? { ...item, isReaded: !item.isReaded }
+    //     : item
+    // );
 
     case types.section:
-      // payload -> object.
-      return state.map(item =>
-        item.id === action.payload.id
-          ? { ...item, section: action.payload.section }
-          : item
-      );
+      return { ...state };
+    // return state.map(item =>
+    //   item.id === action.payload.id
+    //     ? { ...item, section: action.payload.section }
+    //     : item
+    // );
 
     default:
       break;
