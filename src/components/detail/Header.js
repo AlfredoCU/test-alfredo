@@ -3,11 +3,20 @@ import Button from "../common/Button";
 
 const Header = () => {
   return (
-    <div>
-      <p>Header</p>
-      <Button type="button">Hello</Button>
-      <Button type="button">Hi</Button>
-      <Button type="button">Bye</Button>
+    <div className="detail-header">
+      <div>
+        <Button type="button" className="button button--delete">
+          Delete
+        </Button>
+        <Button type="button" className="button">
+          Spam
+        </Button>
+      </div>
+      <div>
+        <Button type="button" className="button button--primary">
+          Mark as unread
+        </Button>
+      </div>
     </div>
   );
 };

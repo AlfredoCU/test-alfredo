@@ -2,8 +2,8 @@ import React from "react";
 
 const TagItem = () => {
   return (
-    <div>
-      <p>Tag Item</p>
+    <div className="detail-info__item-tag">
+      <p>Inbox</p>
     </div>
   );
 };

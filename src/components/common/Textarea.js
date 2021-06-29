@@ -1,11 +1,7 @@
 import React from "react";
 
-const Textarea = () => {
-  return (
-    <div>
-      <p>Textarea</p>
-    </div>
-  );
+const Textarea = ({ props }) => {
+  return <textarea className="textarea" {...props} />;
 };
 
 export default Textarea;

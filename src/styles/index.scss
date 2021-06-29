@@ -16,6 +16,7 @@ body {
   
   &__box {
     width: 100%;
+    // display: none;
     background-color: white;
     box-shadow: 0 25px 50px -12px $shadow;
     
@@ -69,10 +70,12 @@ body {
 .dropdown {
   display: flex;
   cursor: pointer;
+  transition: 0.3s;
   margin: 0 0.5rem;
   font-weight: bold;
+  color: $text-gray;
   align-items: center;
-  border-radius: 0.2rem;
+  border-radius: 0.3rem;
   border: 1px solid $border;
   background-color: white;
 
@@ -99,7 +102,7 @@ body {
     z-index: 100;
     list-style: none;
     position: absolute;
-    border-radius: 0.2rem;
+    border-radius: 0.3rem;
     border: 1px solid $border;
     background-color: white;
   }
@@ -136,9 +139,9 @@ body {
   width: 95%;
   padding: 0.5rem;
   font-size: 0.9rem;
-  border-radius: 0.2rem;
+  border-radius: 0.3rem;
   border: 1px solid $border;
-  box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 2px 10px 1px $card-shadow;
 }
 
 .box-email {
@@ -210,4 +213,151 @@ body {
 
 ::-webkit-scrollbar-thumb {
   background-color: $text-gray;
+}
+
+.detail-header {
+  display: flex;
+  padding: 0.9rem;
+  justify-content: space-between;
+  border-bottom: 1px solid $border;
+}
+
+.button {
+  opacity: 1;
+  margin: 0.5rem;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+  color: $text-gray;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  border: 1px solid $border;
+  background-color: transparent;
+
+  &--primary {
+    color: white;
+    background-color: $blue;
+  }
+  
+  &--delete {
+    color: white;
+    background-color: $red;
+  }
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.detail-info {
+  padding: 0.5rem 1.5rem;
+
+  &__name {
+    padding-bottom: 0.5rem;
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 0.3rem;
+    padding: 0.2rem 0.5rem;
+    border: 1px solid $border;
+    background-color: white;
+    box-shadow: 2px 2px 10px 1px $card-shadow;
+  }
+
+  &__item-tag {
+    margin: 0.5rem;
+    color: $text-gray;
+    font-weight: bold;
+    border-radius: 0.3rem;
+    padding: 0.2rem 0.5rem;
+    border: 1px solid $border;
+
+    & > p {
+      margin: 0.2rem;
+    }
+  }
+
+  &__body {
+    padding: 1rem;
+    margin-top: 1rem;
+    border: 1px solid $border;
+    background-color: white;
+    border-radius:  0.3rem 0.3rem 0 0;
+    box-shadow: 2px 2px 10px 1px $card-shadow;
+
+    & > p {
+      font-size: 0.85rem;
+      text-align: justify;
+      line-height: 1.3rem;
+    }
+  }
+
+  &__file {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item-file {
+    opacity: 1;
+    display: flex;
+    cursor: pointer;
+    margin: 0.5rem 0;
+    transition: 0.3s;
+    align-items: center;
+    border-radius: 0.5rem;
+    border: 1px solid $border;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    & > img {
+      width: 30%;
+      border-radius: 0.5rem 0 0 0.5rem;
+    }
+
+    & > p {
+      padding: 0 0.5rem;
+      font-weight: bold;
+      font-size: 0.85rem;
+    }
+
+    @include medium-up() {
+      width: 10rem;
+      margin: 0.5rem 0.5rem 0.5rem 0;
+    }
+  }
+
+  &__send {
+    display: flex;
+    position: relative;
+  }
+
+  &__icon {
+    top: 12px;
+    left: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    color: $text-gray;
+    position: absolute;
+  }
+
+  &__button {
+    margin: 0;
+    padding: 0.9rem;
+    border-radius: 0 0 0.3rem 0;
+  }
+}
+
+.textarea {
+  width: 90%;
+  resize: none;
+  font-size: 0.8rem;
+  border: 1px solid $border;
+  background-color: $body-bg;
+  padding: 0.6rem 2rem 0.2rem;
+  border-radius: 0 0 0 0.3rem;
+  box-shadow: 0px 2px 10px -1px $card-shadow;
 }
