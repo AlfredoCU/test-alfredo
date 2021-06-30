@@ -1,38 +1,85 @@
 import { types } from "../types/types";
+import data from "../../samples/mail-data.json";
 
-export const emailReducer = (state = {}, action) => {
+const initialState = {
+  emails: data,
+  filter: [],
+  search: "",
+  detail: {},
+  section: "",
+  show: false
+};
+
+export const emailReducer = (state = initialState, action) => {
   switch (action.type) {
     case types.add:
-      // payload -> object.
-      return [action.payload, ...state];
+      return {
+        ...state,
+        emails: [...action.payload, ...state.emails]
+      };
 
     case types.filter:
-      // payload -> string.
-      return state.filter(item => item.section === action.payload);
+      return {
+        ...state,
+        section: action.payload,
+        filter: state.emails.filter(item => item.section === action.payload)
+      };
 
     case types.search:
-      // payload -> object.
-      return state.filter(
-        item =>
-          item.section === action.payload.section &&
-          item.includes(action.payload.value)
-      );
+      console.log(action.payload);
+      return {
+        ...state,
+        search: action.payload.value,
+        filter: search
+          ? state.emails.filter(
+              item =>
+                item.section === action.payload.section &&
+                item.subject
+                  .toLowerCase()
+                  .indexOf(action.payload.value.toLowerCase()) > -1
+            )
+          : state.emails.filter(item => item.section === action.payload.section)
+      };
 
     case types.readed:
-      // payload -> number.
-      return state.map(item =>
-        item.id === action.payload
-          ? { ...item, isReaded: !item.isReaded }
-          : item
-      );
+      return {
+        ...state,
+        show: true,
+        emails: state.emails.map(item =>
+          item.id === action.payload ? { ...item, isReaded: true } : item
+        )
+      };
+
+    case types.unreaded:
+      return {
+        ...state,
+        emails: state.emails.map(item =>
+          item.id === action.payload ? { ...item, isReaded: false } : item
+        )
+      };
 
     case types.section:
-      // payload -> object.
-      return state.map(item =>
-        item.id === action.payload.id
-          ? { ...item, section: action.payload.section }
-          : item
-      );
+      return {
+        ...state,
+        show: false,
+        emails: state.emails.map(item =>
+          item.id === action.payload.id
+            ? { ...item, section: action.payload.section }
+            : item
+        )
+      };
+
+    case types.detail:
+      return {
+        ...state,
+        detail: state.filter.filter(item => item.id === action.payload)[0] || {}
+      };
+
+    case types.showMenu:
+      return {
+        ...state,
+        show: action.payload
+      };
 
     default:
       break;

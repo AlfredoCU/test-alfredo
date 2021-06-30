@@ -1,15 +1,16 @@
 import React from "react";
+import { string } from "prop-types";
 
-const FileItem = () => {
-  return (
-    <div className="detail-info__item-file">
-      <img
-        src="http://dummyimage.com/250x250.jpg/5fa2dd/ffffff"
-        alt="namefile"
-      />
-      <p>namefile file f</p>
-    </div>
-  );
+const FileItem = ({ file, name }) => (
+  <div className="detail-info__item-file">
+    <img src={file} alt={name} />
+    <p>{name}</p>
+  </div>
+);
+
+FileItem.propTypes = {
+  file: string.isRequired,
+  name: string.isRequired
 };
 
 export default FileItem;
