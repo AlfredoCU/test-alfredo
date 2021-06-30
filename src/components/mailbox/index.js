@@ -10,6 +10,7 @@ import { newData } from "../../helpers/newData";
 import Header from "./Header";
 import Search from "./Search";
 import EmailItem from "./EmailItem";
+import Notification from "../common/Notification";
 
 const MailBox = () => {
   const dispatch = useDispatch();
@@ -17,6 +18,7 @@ const MailBox = () => {
   const { filter } = email;
 
   const [section, setSection] = useState("Inbox");
+  const [notification, setNotification] = useState(false);
 
   useEffect(() => {
     dispatch(emailFilter(section));
@@ -28,16 +30,28 @@ const MailBox = () => {
     dispatch(emailDetail(id));
   };
 
+  const handleNotification = show => {
+    setNotification(show);
+  };
+
   useEffect(() => {
     setInterval(() => {
       let data = newData();
-      dispatch(emailAdd(data));
       setSection("Inbox");
+      setNotification(true);
+      dispatch(emailAdd(data));
+      dispatch(emailFilter(section));
     }, 90000);
   }, []);
 
   return (
     <div className="app__box">
+      {notification && (
+        <Notification
+          message="You have new emails"
+          close={handleNotification}
+        />
+      )}
       <Header
         section={section}
         count={filter && filter.length}
