@@ -31,8 +31,9 @@ const MailBox = () => {
   useEffect(() => {
     setInterval(() => {
       let data = newData();
-      dispatch(emailAdd(data));
       setSection("Inbox");
+      dispatch(emailAdd(data));
+      dispatch(emailFilter(section));
     }, 90000);
   }, []);
 
