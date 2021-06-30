@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { emailFilter } from "../../store/actions/email";
+import { emailFilter, emailReaded } from "../../store/actions/email";
 import Header from "./Header";
 import Search from "./Search";
 import EmailItem from "./EmailItem";
@@ -16,6 +16,11 @@ const MailBox = () => {
     dispatch(emailFilter(section));
   }, [section]);
 
+  const handleIsReaded = id => {
+    dispatch(emailReaded({ id, section }));
+    dispatch(emailFilter(section));
+  };
+
   return (
     <div className="app__box">
       <Header
@@ -29,11 +34,13 @@ const MailBox = () => {
           filter.map(email => (
             <EmailItem
               key={email.id}
+              id={email.id}
               subject={email.subject}
               body={email.body}
               date={email.date}
               isReaded={email.isReaded}
               attachements={email.attachements}
+              handleIsReaded={handleIsReaded}
             />
           ))}
       </div>

@@ -38,12 +38,12 @@ export const emailReducer = (state = initialState, action) => {
       };
 
     case types.readed:
-      return { ...state };
-    // return state.map(item =>
-    //   item.id === action.payload
-    //     ? { ...item, isReaded: !item.isReaded }
-    //     : item
-    // );
+      return {
+        ...state,
+        emails: state.emails.map(item =>
+          item.id === action.payload.id ? { ...item, isReaded: true } : item
+        )
+      };
 
     case types.section:
       return { ...state };

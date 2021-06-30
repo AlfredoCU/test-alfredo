@@ -9,7 +9,7 @@ export const emailFilter = payload => ({ type: types.filter, payload });
 // payload -> string (value).
 export const emailSearch = payload => ({ type: types.search, payload });
 
-// payload -> number (id).
+// payload -> object (id).
 export const emailReaded = payload => ({ type: types.readed, payload });
 
 // payload -> object (data).

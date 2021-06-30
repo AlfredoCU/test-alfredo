@@ -1,14 +1,25 @@
 import React from "react";
-import { string, bool, arrayOf, shape } from "prop-types";
+import { string, bool, arrayOf, shape, func } from "prop-types";
 import { faPaperclip } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const EmailItem = ({ subject, body, date, isReaded, attachements }) => {
+const EmailItem = ({
+  id,
+  subject,
+  body,
+  date,
+  isReaded,
+  attachements,
+  handleIsReaded
+}) => {
   let card = isReaded || "box-email__item--active";
   let name = isReaded || "box-email__name--active";
 
   return (
-    <div className={`box-email__item ${card}`}>
+    <div
+      className={`box-email__item ${card}`}
+      onClick={() => handleIsReaded(id)}
+    >
       <div className="box-email__section">
         <p className={`box-email__name ${name}`}>{subject}</p>
         <p className="box-email__body">{body}</p>
@@ -25,6 +36,7 @@ const EmailItem = ({ subject, body, date, isReaded, attachements }) => {
 };
 
 EmailItem.propTypes = {
+  id: string.isRequired,
   subject: string.isRequired,
   body: string.isRequired,
   date: string.isRequired,
@@ -34,7 +46,8 @@ EmailItem.propTypes = {
       file: string.isRequired,
       name: string.isRequired
     })
-  ).isRequired
+  ).isRequired,
+  handleIsReaded: func.isRequired
 };
 
 export default EmailItem;
