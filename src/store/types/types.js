@@ -5,5 +5,6 @@ export const types = {
   readed: "[Email] Readed",
   unreaded: "[Email] Unreaded",
   section: "[Email] Section",
-  detail: "[Email] Detail"
+  detail: "[Email] Detail",
+  showMenu: "[Email] ShowMenu"
 };

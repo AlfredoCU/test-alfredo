@@ -16,7 +16,6 @@ body {
   
   &__box {
     width: 100%;
-    // display: none;
     background-color: white;
     box-shadow: 0 25px 50px -12px $shadow;
     
@@ -31,12 +30,41 @@ body {
   
   &__detail {
     width: 100%;
-    display: none;
-    
+    height: 100%;
+    overflow: auto;
+    position: fixed;
+    transition: 0.3s;
+    background-color: $body-bg;
+    transform: translateX(-100%);
+
+    &--show {
+      transform: translateX(0%);
+    }
+
     @include medium-up() {
       width: 70%;
-      display: block;
+      height: auto;
+      overflow: hidden;
+      position: static;
+      transform: translateX(0%);
     }
+  }
+
+  &__return {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0.5rem;
+    background-color: white;
+    border-bottom: 1px solid $border;
+
+    @include medium-up() {
+      display: none;
+    }
+  }
+
+  &__icon {
+    padding: 0 0.5rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -230,6 +258,14 @@ body {
   padding: 0.9rem;
   justify-content: space-between;
   border-bottom: 1px solid $border;
+
+  &__button {
+    width: 80%;
+
+    @include medium-up() {
+      width: auto;
+    }
+  }
 }
 
 .button {

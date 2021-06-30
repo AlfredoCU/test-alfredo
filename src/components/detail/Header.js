@@ -7,12 +7,16 @@ const Header = ({ id, handleDelete, handleSpam, handleUnread }) => (
     <div>
       <Button
         type="button"
-        className="button button--delete"
+        className="button button--delete detail-header__button"
         onClick={() => handleDelete(id)}
       >
         Delete
       </Button>
-      <Button type="button" className="button" onClick={() => handleSpam(id)}>
+      <Button
+        type="button"
+        className="button detail-header__button"
+        onClick={() => handleSpam(id)}
+      >
         Spam
       </Button>
     </div>

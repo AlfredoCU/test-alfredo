@@ -20,3 +20,6 @@ export const emailSection = payload => ({ type: types.section, payload });
 
 // payload -> number (id).
 export const emailDetail = payload => ({ type: types.detail, payload });
+
+// payload -> bool (show).
+export const emailShow = payload => ({ type: types.showMenu, payload });
