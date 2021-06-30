@@ -14,3 +14,6 @@ export const emailReaded = payload => ({ type: types.readed, payload });
 
 // payload -> object (data).
 export const emailSection = payload => ({ type: types.section, payload });
+
+// payload -> number (id).
+export const emailDetail = payload => ({ type: types.detail, payload });

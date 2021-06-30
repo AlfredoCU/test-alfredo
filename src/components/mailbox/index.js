@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { emailFilter, emailReaded } from "../../store/actions/email";
+import {
+  emailFilter,
+  emailReaded,
+  emailDetail
+} from "../../store/actions/email";
 import Header from "./Header";
 import Search from "./Search";
 import EmailItem from "./EmailItem";
@@ -19,6 +23,7 @@ const MailBox = () => {
   const handleIsReaded = id => {
     dispatch(emailReaded({ id, section }));
     dispatch(emailFilter(section));
+    dispatch(emailDetail(id));
   };
 
   return (

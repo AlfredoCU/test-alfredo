@@ -45,7 +45,7 @@ EmailItem.propTypes = {
     shape({
       file: string.isRequired,
       name: string.isRequired
-    })
+    }).isRequired
   ).isRequired,
   handleIsReaded: func.isRequired
 };

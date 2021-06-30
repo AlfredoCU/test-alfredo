@@ -4,7 +4,8 @@ import data from "../../samples/mail-data.json";
 const initialState = {
   emails: data,
   filter: [],
-  search: ""
+  search: "",
+  detail: {}
 };
 
 export const emailReducer = (state = initialState, action) => {
@@ -52,6 +53,12 @@ export const emailReducer = (state = initialState, action) => {
     //     ? { ...item, section: action.payload.section }
     //     : item
     // );
+
+    case types.detail:
+      return {
+        ...state,
+        detail: state.filter.filter(item => item.id === action.payload)[0]
+      };
 
     default:
       break;

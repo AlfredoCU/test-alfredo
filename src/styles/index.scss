@@ -329,9 +329,16 @@ body {
     }
 
     & > p {
+      display: box;
+      line-clamp: 1;
+      overflow: hidden;
       padding: 0 0.5rem;
       font-weight: bold;
-      font-size: 0.85rem;
+      display: -webkit-box;
+      box-orient: vertical;
+      word-break: break-all;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
     }
 
     @include medium-up() {
