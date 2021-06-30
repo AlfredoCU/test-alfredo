@@ -3,6 +3,7 @@ export const types = {
   filter: "[Email] Filter",
   search: "[Email] Search",
   readed: "[Email] Readed",
+  unreaded: "[Email] Unreaded",
   section: "[Email] Section",
   detail: "[Email] Detail"
 };

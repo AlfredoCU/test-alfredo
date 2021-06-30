@@ -12,6 +12,9 @@ export const emailSearch = payload => ({ type: types.search, payload });
 // payload -> object (id).
 export const emailReaded = payload => ({ type: types.readed, payload });
 
+// payload -> object (id).
+export const emailUnreaded = payload => ({ type: types.unreaded, payload });
+
 // payload -> object (data).
 export const emailSection = payload => ({ type: types.section, payload });
 

@@ -21,7 +21,7 @@ const MailBox = () => {
   }, [section]);
 
   const handleIsReaded = id => {
-    dispatch(emailReaded({ id, section }));
+    dispatch(emailReaded(id));
     dispatch(emailFilter(section));
     dispatch(emailDetail(id));
   };

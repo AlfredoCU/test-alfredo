@@ -1,18 +1,18 @@
 import React from "react";
-import { func } from "prop-types";
+import { string, func } from "prop-types";
 import Button from "../common/Button";
 
-const Header = ({ handleDelete, handleSpam, handleUnread }) => (
+const Header = ({ id, handleDelete, handleSpam, handleUnread }) => (
   <div className="detail-header">
     <div>
       <Button
         type="button"
         className="button button--delete"
-        onClick={() => handleDelete}
+        onClick={() => handleDelete(id)}
       >
         Delete
       </Button>
-      <Button type="button" className="button" onClick={() => handleSpam}>
+      <Button type="button" className="button" onClick={() => handleSpam(id)}>
         Spam
       </Button>
     </div>
@@ -20,7 +20,7 @@ const Header = ({ handleDelete, handleSpam, handleUnread }) => (
       <Button
         type="button"
         className="button button--primary"
-        onClick={() => handleUnread}
+        onClick={() => handleUnread(id)}
       >
         Mark as unread
       </Button>
@@ -29,6 +29,7 @@ const Header = ({ handleDelete, handleSpam, handleUnread }) => (
 );
 
 Header.propTypes = {
+  id: string.isRequired,
   handleDelete: func.isRequired,
   handleSpam: func.isRequired,
   handleUnread: func.isRequired

@@ -5,7 +5,8 @@ const initialState = {
   emails: data,
   filter: [],
   search: "",
-  detail: {}
+  detail: {},
+  section: ""
 };
 
 export const emailReducer = (state = initialState, action) => {
@@ -19,6 +20,7 @@ export const emailReducer = (state = initialState, action) => {
     case types.filter:
       return {
         ...state,
+        section: action.payload,
         filter: state.emails.filter(item => item.section === action.payload)
       };
 
@@ -42,22 +44,32 @@ export const emailReducer = (state = initialState, action) => {
       return {
         ...state,
         emails: state.emails.map(item =>
-          item.id === action.payload.id ? { ...item, isReaded: true } : item
+          item.id === action.payload ? { ...item, isReaded: true } : item
+        )
+      };
+
+    case types.unreaded:
+      return {
+        ...state,
+        emails: state.emails.map(item =>
+          item.id === action.payload ? { ...item, isReaded: false } : item
         )
       };
 
     case types.section:
-      return { ...state };
-    // return state.map(item =>
-    //   item.id === action.payload.id
-    //     ? { ...item, section: action.payload.section }
-    //     : item
-    // );
+      return {
+        ...state,
+        emails: state.emails.map(item =>
+          item.id === action.payload.id
+            ? { ...item, section: action.payload.section }
+            : item
+        )
+      };
 
     case types.detail:
       return {
         ...state,
-        detail: state.filter.filter(item => item.id === action.payload)[0]
+        detail: state.filter.filter(item => item.id === action.payload)[0] || {}
       };
 
     default:
