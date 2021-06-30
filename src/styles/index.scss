@@ -43,9 +43,9 @@ body {
 
     @include medium-up() {
       width: 70%;
-      height: auto;
       overflow: hidden;
       position: static;
+      height: max-content;
       transform: translateX(0%);
     }
   }
