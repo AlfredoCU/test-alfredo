@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
+  emailAdd,
   emailFilter,
   emailReaded,
   emailDetail
 } from "../../store/actions/email";
+import { newData } from "../../helpers/newData";
 import Header from "./Header";
 import Search from "./Search";
 import EmailItem from "./EmailItem";
@@ -25,6 +27,14 @@ const MailBox = () => {
     dispatch(emailFilter(section));
     dispatch(emailDetail(id));
   };
+
+  useEffect(() => {
+    setInterval(() => {
+      let data = newData();
+      dispatch(emailAdd(data));
+      setSection("Inbox");
+    }, 90000);
+  }, []);
 
   return (
     <div className="app__box">

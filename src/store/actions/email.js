@@ -1,6 +1,6 @@
 import { types } from "../types/types";
 
-// payload -> object (data).
+// payload -> array of object (data).
 export const emailAdd = payload => ({ type: types.add, payload });
 
 // payload -> object (data).

@@ -15,7 +15,7 @@ export const emailReducer = (state = initialState, action) => {
     case types.add:
       return {
         ...state,
-        emails: [action.payload, ...state]
+        emails: [...action.payload, ...state.emails]
       };
 
     case types.filter:
